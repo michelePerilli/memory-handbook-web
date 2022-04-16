@@ -15,12 +15,16 @@ import {MatDividerModule} from "@angular/material/divider";
 import {MatButtonModule} from "@angular/material/button";
 import {MatSortModule} from "@angular/material/sort";
 import {FormsModule} from "@angular/forms";
+import {DettaglioPasswordComponent} from './password/dettaglio-password/dettaglio-password.component';
+import {HomeComponent} from './home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RicercaPasswordComponent
+    RicercaPasswordComponent,
+    DettaglioPasswordComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

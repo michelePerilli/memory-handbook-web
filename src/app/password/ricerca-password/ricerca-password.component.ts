@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Password} from "../password";
 import {RicercaPasswordService} from "./ricerca-password.service";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -16,7 +17,12 @@ export class RicercaPasswordComponent implements OnInit {
   page: Password = {};
 
 
-  constructor(public ricercaService: RicercaPasswordService) {
+  constructor(public ricercaService: RicercaPasswordService, private router: Router) {
+
+  }
+
+  new() {
+    this.router.navigate(['/insert']);
   }
 
   ngOnInit(): void {
