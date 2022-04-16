@@ -2,12 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {Password} from "../password";
 import {RicercaPasswordService} from "./ricerca-password.service";
 
-export interface Tile {
-  color: string;
-  cols: number;
-  rows: number;
-  text: string;
-}
 
 @Component({
   selector: 'app-ricerca-password',
@@ -21,10 +15,12 @@ export class RicercaPasswordComponent implements OnInit {
   showResult: boolean = false;
   page: Password = {};
 
+
   constructor(public ricercaService: RicercaPasswordService) {
   }
 
   ngOnInit(): void {
+    this.clear();
   }
 
   all() {
