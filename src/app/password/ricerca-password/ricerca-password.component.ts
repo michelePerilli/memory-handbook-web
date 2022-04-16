@@ -15,10 +15,10 @@ export interface Tile {
   styleUrls: ['./ricerca-password.component.scss', '../../app.component.scss']
 })
 export class RicercaPasswordComponent implements OnInit {
-  displayedColumns: string[] = ['email', 'pass', 'user', 'desc'];
+  displayedColumns: string[] = ['email', 'pass', 'user', 'desc', 'id'];
 
   results: Password[] = [];
-
+  showResult: boolean = false;
   page: Password = {};
 
   constructor(public ricercaService: RicercaPasswordService) {
@@ -33,7 +33,16 @@ export class RicercaPasswordComponent implements OnInit {
     })
   }
 
+  clear() {
+    this.showResult = false;
+    this.page.email = '';
+    this.page.password = '';
+    this.page.username = '';
+    this.page.descrizione = '';
+  }
+
   search() {
+    this.showResult = true;
     this.ricercaService.search(this.page).subscribe((res) => {
       this.results = res;
     })

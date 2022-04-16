@@ -1,0 +1,78 @@
+.page {
+  margin: 10px 100px;
+  padding: 10px;
+}
+
+.container {
+  max-width: 1000px;
+  display: block;
+  overflow: hidden;
+  border: 1px solid rgba(68, 71, 74, 0.3);
+  border-radius: 4px;
+  margin: 5px auto 20px;
+}
+
+.container .title {
+  border-bottom: 1px solid rgba(68, 71, 74, 0.3);
+  padding: 5px;
+}
+.container .body {
+  border-bottom: 1px solid rgba(68, 71, 74, 0.3);
+  padding: 5px 5px 10px;
+}
+
+.container .body-end {
+  padding: 5px;
+}
+
+.row {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.col {
+  flex-direction: column;
+  margin: auto;
+}
+
+.align-center {
+  justify-content: flex-end;
+}
+
+.align-end {
+  justify-content: flex-end;
+}
+
+.no-border {
+  border: 0;
+}
+
+p {
+  margin: 9px 9px;
+  color: rgba(68, 71, 74, 0.71);
+  font-weight: 500;
+}
+
+.form-field {
+  width: 100%;
+  margin: 10px 30px;
+}
+
+
+
+
+#primary {
+  color: #673ab7;
+}
+
+* {
+  box-sizing: border-box;
+  font: 500 24px Roboto, "Helvetica Neue";
+}
+
+button {
+  padding: 5px 25px;
+
+}
+
+
