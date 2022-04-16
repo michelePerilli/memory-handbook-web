@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {baseURL} from "../../../environments/environment";
 import {Password} from "../password";
 
 @Injectable({
@@ -11,12 +10,13 @@ export class RicercaPasswordService {
   constructor(private http: HttpClient) {
   }
 
+
   all() {
-    return this.http.get<Password[]>(`${baseURL}/password/list`);
+    return this.http.get<Password[]>(`http://localhost:8081/api/password/list`);
   }
 
-  search(data: Password) {
-    return this.http.post<Password[]>(`${baseURL}/password/ricerca`, data);
+  search(dto: Password) {
+    return this.http.post<Password[]>(`http://localhost:8081/api/password/ricerca`, dto);
   }
 
 }
