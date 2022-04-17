@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Password} from "../password";
-import {RicercaPasswordService} from "./ricerca-password.service";
+import {PasswordService} from "../password.service";
 import {Router} from "@angular/router";
 
 
@@ -17,12 +17,12 @@ export class RicercaPasswordComponent implements OnInit {
   page: Password = {};
 
 
-  constructor(public ricercaService: RicercaPasswordService, private router: Router) {
+  constructor(public ricercaService: PasswordService, private router: Router) {
 
   }
 
   new() {
-    this.router.navigate(['/insert']);
+    this.router.navigate(['/password/insert']);
   }
 
   ngOnInit(): void {
@@ -48,5 +48,9 @@ export class RicercaPasswordComponent implements OnInit {
     this.ricercaService.search(this.page).subscribe((res) => {
       this.results = res;
     })
+  }
+
+  home() {
+    this.router.navigate(['home']);
   }
 }

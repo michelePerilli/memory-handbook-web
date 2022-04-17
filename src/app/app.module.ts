@@ -7,7 +7,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RicercaPasswordComponent} from './password/ricerca-password/ricerca-password.component';
 import {MatGridListModule} from "@angular/material/grid-list";
 import {HttpClientModule} from "@angular/common/http";
-import {RicercaPasswordService} from "./password/ricerca-password/ricerca-password.service";
+import {PasswordService} from "./password/password.service";
 import {MatTableModule} from "@angular/material/table";
 import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
@@ -17,6 +17,7 @@ import {MatSortModule} from "@angular/material/sort";
 import {FormsModule} from "@angular/forms";
 import {DettaglioPasswordComponent} from './password/dettaglio-password/dettaglio-password.component';
 import {HomeComponent} from './home/home.component';
+import {InserimentoPasswordComponent} from './password/inserimento-password/inserimento-password.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {HomeComponent} from './home/home.component';
     AppComponent,
     RicercaPasswordComponent,
     DettaglioPasswordComponent,
-    HomeComponent
+    HomeComponent,
+    InserimentoPasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,7 @@ import {HomeComponent} from './home/home.component';
     MatSortModule,
     FormsModule
   ],
-  providers: [RicercaPasswordService],
+  providers: [PasswordService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

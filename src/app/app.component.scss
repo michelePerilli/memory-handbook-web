@@ -78,4 +78,31 @@ button {
   font: 500 22px Roboto, "Helvetica Neue";
 }
 
+.form-input {
+  height: 2.5rem;
+  padding: 4px 10px;
+  border: 1px solid rgba(68, 71, 74, 0.5);
+  border-radius: 4px;
+  font: 400 20px Roboto, "Helvetica Neue";
+  width: 100%;
 
+  &:focus-visible {
+    outline-color: colors.$primary;
+  }
+}
+
+.form-input-label {
+  display: block;
+  padding: 0 3px;
+  margin: 1px 2px;
+  color: colors.$gray-primary;
+  width: 170px;
+  font: 500 18px Roboto, "Helvetica Neue";
+
+}
+
+
+.form-button {
+  margin: 7px;
+  font-weight: 430;
+}
