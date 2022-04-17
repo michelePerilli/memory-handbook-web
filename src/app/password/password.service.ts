@@ -16,7 +16,7 @@ export class PasswordService {
   }
 
   search(dto: Password) {
-    return this.http.post<Password[]>(`http://localhost:8081/api/password/ricerca-mock`, dto);
+    return this.http.post<Password[]>(`http://localhost:8081/api/password/ricerca`, dto);
   }
 
   insert(dto: Password) {

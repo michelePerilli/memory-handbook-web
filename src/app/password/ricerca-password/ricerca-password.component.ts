@@ -46,6 +46,9 @@ export class RicercaPasswordComponent implements OnInit {
   search() {
     this.showResult = true;
     this.ricercaService.search(this.page).subscribe((res) => {
+      res.map(x => {
+        x.password = '**********';
+      })
       this.results = res;
     })
   }
